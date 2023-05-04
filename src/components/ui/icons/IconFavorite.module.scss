@@ -1,0 +1,20 @@
+@import '../../../styles/variables.scss';
+
+.favorite {
+  height: 2.4rem;
+  width: 2.4rem;
+  transition: all .3s;
+
+  &__full,
+  &:hover {
+    fill: $Icon-Service-Error;
+    stroke: $Icon-Service-Error;
+    stroke-width: 2;
+  }
+
+  &__border {
+    fill: none;
+    stroke: $Icon-Primary;
+    stroke-width: 2;
+  }
+}

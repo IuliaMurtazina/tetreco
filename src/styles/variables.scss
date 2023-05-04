@@ -1,0 +1,75 @@
+// VARIABLES 
+
+// Buttons
+$Button-Primary-Enabled: #FF8658;
+$Button-Primary-Hover: #FF966E;
+$Button-Primary-Pressed: #F57645;
+$Button-Primary-Disabled: #FBBFA8;
+
+$Button-Secondary-Anabled: #7155C6;
+$Button-Secondary-Hover: #7B5AE2;
+$Button-Secondary-Pressed: #6B51BA;
+$Button-Secondary-Disabled: #E4E2EB;
+
+// Text
+$Text-Primary-Light: #FFFFFF;
+$Text-Primary: #1C222E;
+
+$Text-Accent-Enabled: #6C56B0;
+$Text-Accent-Hover: #896EDC;
+$Text-Accent-Pressed: #59429F;
+
+$Text-Secondary: #6A7998;
+$Text-Tetriary: #99A7C4;
+
+$Text-Accent-Disabled: #C4BAE2;
+$Text-Service-Error: #AF052F;
+$Text-Service-Warning: #C87F05;
+$Text-Service-Success: #60994E;
+
+// Icon
+
+$Icon-Primary-Light: #FFFFFF;
+$Icon-Primary: #1C222E;
+
+$Icon-Accent-Enabled: #6C56B0;
+$Icon-Accent-Hover: #896EDC;
+$Icon-Accent-Pressed: #59429F;
+
+$Icon-Accent-Disabled: #B4B1BD;
+$Icon-Service-Error: #E9305D;
+$Icon-Service-Warning: #F3A015;
+$Icon-Service-Success: #7CBC68;
+
+// Background
+
+$Background-Primary-Light: #FFFFFF;
+$Background-Primary: #1B2143;
+$Background-Background: #F9F8FD;
+$Background-Accent: #E7E5F0;
+$Background-Error: #F8E3E9;
+
+
+// Font-size 
+
+@mixin text-big {
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+}
+
+@mixin text-small {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+@mixin button-big {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+@mixin button-big {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
