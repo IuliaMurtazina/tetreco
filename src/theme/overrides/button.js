@@ -6,7 +6,6 @@ const MuiButton = {
       borderRadius: "8px",
       boxShadow: "none",
       textTransform: "none",
-      fontFamily: `'Golos Text', sans-serif`,
       transition: "all .3s ease-out",
       ":hover": {
         boxShadow: "none",
