@@ -35,5 +35,10 @@
     "*.{css,scss,md,json}": [
       "npm run format"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && lint-staged"
+    }
   }
 }
