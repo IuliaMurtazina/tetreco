@@ -8,6 +8,6 @@ const App = ({ Component, pageProps }) => {
       <Component {...pageProps} />
     </ThemeProvider>
   );
-}
+};
 
 export default App;
