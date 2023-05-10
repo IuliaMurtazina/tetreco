@@ -5,6 +5,12 @@ export const buttonPalette = {
     pressed: "#F57645",
     disabled: "#FBBFA8",
   },
+  secondary: {
+    enabled: "#7155C6",
+    hover: "#7B5AE2",
+    pressed: "#6B51BA",
+    disabled: "#E4E2EB",
+  },
 };
 
 export const textPalette = {
@@ -19,7 +25,7 @@ export const textPalette = {
     disabled: "#C4BAE2",
   },
   secondary: "#6A7998",
-  tetriary: "#99A7C4",
+  tertiary: "#99A7C4",
   service: {
     error: "#AF052F",
     warning: "#C87F05",
@@ -43,4 +49,11 @@ export const iconPalette = {
     warning: "#F3A015",
     success: "#7CBC68",
   },
+  tertiary: "#6A7998",
+};
+
+export const inputPalette = {
+  enabled: "#D2D2D2",
+  hover: "#7155C6",
+  focused: "#6B51BA",
 };

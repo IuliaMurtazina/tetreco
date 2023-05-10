@@ -1,56 +1,61 @@
-// VARIABLES 
+// VARIABLES
 
 // Buttons
-$Button-Primary-Enabled: #FF8658;
-$Button-Primary-Hover: #FF966E;
-$Button-Primary-Pressed: #F57645;
-$Button-Primary-Disabled: #FBBFA8;
+$Button-Primary-Enabled: #ff8658;
+$Button-Primary-Hover: #ff966e;
+$Button-Primary-Pressed: #f57645;
+$Button-Primary-Disabled: #fbbfa8;
 
-$Button-Secondary-Anabled: #7155C6;
-$Button-Secondary-Hover: #7B5AE2;
-$Button-Secondary-Pressed: #6B51BA;
-$Button-Secondary-Disabled: #E4E2EB;
+$Button-Secondary-Anabled: #7155c6;
+$Button-Secondary-Hover: #7b5ae2;
+$Button-Secondary-Pressed: #6b51ba;
+$Button-Secondary-Disabled: #e4e2eb;
 
 // Text
-$Text-Primary-Light: #FFFFFF;
-$Text-Primary: #1C222E;
+$Text-Primary-Light: #ffffff;
+$Text-Primary: #1c222e;
 
-$Text-Accent-Enabled: #6C56B0;
-$Text-Accent-Hover: #896EDC;
-$Text-Accent-Pressed: #59429F;
+$Text-Accent-Enabled: #6c56b0;
+$Text-Accent-Hover: #896edc;
+$Text-Accent-Pressed: #59429f;
 
-$Text-Secondary: #6A7998;
-$Text-Tetriary: #99A7C4;
+$Text-Secondary: #6a7998;
+$Text-Tertiary: #99a7c4;
 
-$Text-Accent-Disabled: #C4BAE2;
-$Text-Service-Error: #AF052F;
-$Text-Service-Warning: #C87F05;
-$Text-Service-Success: #60994E;
+$Text-Accent-Disabled: #c4bae2;
+$Text-Service-Error: #af052f;
+$Text-Service-Warning: #c87f05;
+$Text-Service-Success: #60994e;
 
 // Icon
 
-$Icon-Primary-Light: #FFFFFF;
-$Icon-Primary: #1C222E;
+$Icon-Primary-Light: #ffffff;
+$Icon-Primary: #1c222e;
 
-$Icon-Accent-Enabled: #6C56B0;
-$Icon-Accent-Hover: #896EDC;
-$Icon-Accent-Pressed: #59429F;
+$Icon-Accent-Enabled: #6c56b0;
+$Icon-Accent-Hover: #896edc;
+$Icon-Accent-Pressed: #59429f;
 
-$Icon-Accent-Disabled: #B4B1BD;
-$Icon-Service-Error: #E9305D;
-$Icon-Service-Warning: #F3A015;
-$Icon-Service-Success: #7CBC68;
+$Icon-Accent-Disabled: #b4b1bd;
+$Icon-Service-Error: #e9305d;
+$Icon-Service-Warning: #f3a015;
+$Icon-Service-Success: #7cbc68;
 
 // Background
 
-$Background-Primary-Light: #FFFFFF;
-$Background-Primary: #1B2143;
-$Background-Background: #F9F8FD;
-$Background-Accent: #E7E5F0;
-$Background-Error: #F8E3E9;
+$Background-Primary-Light: #ffffff;
+$Background-Primary: #1b2143;
+$Background-Background: #f9f8fd;
+$Background-Accent: #e7e5f0;
+$Background-Error: #f8e3e9;
 
+// Inputs
 
-// Font-size 
+$Input-Enabled: #d2d2d2;
+$Input-Hover: #7155c6;
+$Input-Focused: #6b51ba;
+
+// Font-size
 
 @mixin text-big {
   font-size: 2.2rem;
