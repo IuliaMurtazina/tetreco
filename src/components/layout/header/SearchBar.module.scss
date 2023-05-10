@@ -1,0 +1,14 @@
+@import "../../../styles/variables.scss";
+
+.searchBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background: $Button-Secondary-Anabled;
+  border: 1px solid $Button-Secondary-Anabled;
+  border-radius: 8px;
+}

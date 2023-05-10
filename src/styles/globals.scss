@@ -47,3 +47,12 @@ h4 {
   font-size: 20px;
   line-height: 32px;
 }
+
+.container {
+  max-width: 118rem;
+  margin: 0 auto;
+}
+
+main {
+  background-color: $Background-Background;
+}
