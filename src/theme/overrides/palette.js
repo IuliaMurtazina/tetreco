@@ -49,6 +49,7 @@ export const iconPalette = {
     warning: "#F3A015",
     success: "#7CBC68",
   },
+  tertiary: "#6A7998",
 };
 
 export const inputPalette = {

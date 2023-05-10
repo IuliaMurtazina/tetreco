@@ -20,6 +20,7 @@ const MuiTextField = {
       },
       ".MuiInputBase-root": {
         backgroundColor: textPalette.primary.light,
+        borderRadius: 8,
       },
       ".MuiFormHelperText-root": {
         fontSize: 14,

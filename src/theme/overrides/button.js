@@ -11,10 +11,10 @@ const MuiButton = {
         boxShadow: "none",
       },
       ".MuiButton-startIcon": {
-        marginRight: "16px",
+        marginRight: 16,
       },
       ".MuiButton-endIcon": {
-        marginLeft: "16px",
+        marginLeft: 16,
       },
     },
   },
@@ -27,14 +27,14 @@ const MuiButton = {
         border: `3px solid ${buttonPalette.primary.enabled}`,
         ":hover": {
           backgroundColor: buttonPalette.primary.hover,
-          border: `3px solid ${buttonPalette.primary.hover}`,
+          borderColor: buttonPalette.primary.hover,
         },
         ":active": {
-          border: `3px solid ${buttonPalette.primary.pressed}`,
+          borderColor: buttonPalette.primary.pressedhover,
           backgroundColor: buttonPalette.primary.pressed,
         },
         ":disabled": {
-          border: `3px solid ${buttonPalette.primary.disabled}`,
+          borderColor: buttonPalette.primary.disabledhover,
           color: textPalette.primary.light,
           backgroundColor: buttonPalette.primary.disabled,
         },
@@ -45,17 +45,17 @@ const MuiButton = {
       style: {
         backgroundColor: textPalette.primary.light,
         color: textPalette.primary.main,
-        border: `3px solid ${buttonPalette.primary.enabled}`,
+        borderColor: buttonPalette.primary.enabled,
         ":hover": {
           backgroundColor: textPalette.primary.light,
-          border: `3px solid ${buttonPalette.primary.hover}`,
+          borderColor: buttonPalette.primary.hover,
         },
         ":active": {
-          border: `3px solid ${buttonPalette.primary.pressed}`,
+          borderColor: buttonPalette.primary.pressed,
           backgroundColor: buttonPalette.primary.hover,
         },
         ":disabled": {
-          border: `3px solid ${buttonPalette.primary.disabled}`,
+          borderColor: buttonPalette.primary.disabled,
         },
       },
     },
@@ -78,13 +78,13 @@ const MuiButton = {
       props: { size: "small" },
       style: {
         fontSize: 16,
-        padding: "7px 15px",
+        padding: "5px 14px",
         fontWeight: 500,
       },
     },
     {
       props: { size: "large" },
-      style: { fontSize: 18, padding: "11px 23px", fontWeight: 500 },
+      style: { fontSize: 18, padding: "10px 22px", fontWeight: 500 },
     },
     {
       props: { type: "round" },
@@ -93,20 +93,33 @@ const MuiButton = {
     {
       props: { type: "round", variant: "outlined" },
       style: {
-        border: `3px solid ${iconPalette.accent.enabled}`,
+        borderColor: iconPalette.accent.enabled,
         color: iconPalette.accent.enabled,
         ":hover": {
           color: iconPalette.accent.hover,
-          border: `3px solid ${iconPalette.accent.hover}`,
+          borderColor: iconPalette.accent.hover,
         },
         ":active": {
-          border: `3px solid ${iconPalette.accent.pressed}`,
+          borderColor: iconPalette.accent.pressed,
           color: iconPalette.accent.pressed,
           backgroundColor: "transparent",
         },
         ":disabled": {
-          border: `3px solid ${iconPalette.accent.disabled}`,
+          borderColor: iconPalette.accent.disabled,
           color: iconPalette.accent.disabled,
+        },
+      },
+    },
+    {
+      props: { search: true },
+      style: {
+        borderColor: buttonPalette.secondary.enabled,
+        backgroundColor: buttonPalette.secondary.enabled,
+        color: textPalette.primary.light,
+        ":hover": {
+          borderColor: buttonPalette.secondary.hover,
+          backgroundColor: buttonPalette.secondary.hover,
+          color: textPalette.primary.light,
         },
       },
     },
