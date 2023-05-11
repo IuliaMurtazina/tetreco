@@ -2,7 +2,7 @@
 
 .searchBar {
   display: flex;
-  justify-content: space-between;
+  gap: 2rem;
 }
 
 .search {
@@ -11,4 +11,5 @@
   background: $Button-Secondary-Anabled;
   border: 1px solid $Button-Secondary-Anabled;
   border-radius: 8px;
+  flex-grow: 1;
 }
