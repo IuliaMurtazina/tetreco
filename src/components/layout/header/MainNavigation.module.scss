@@ -16,10 +16,17 @@
 
 .left {
   gap: 4rem;
+
+  @media screen and (max-width: $Desktop) {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
 }
 
 .right {
   gap: 1.6rem;
+  position: relative;
 }
 
 .logo {
@@ -34,4 +41,7 @@
   p {
     color: $Text-Secondary;
   }
+}
+
+.actions {
 }

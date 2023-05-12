@@ -3,8 +3,12 @@ import classes from "./MainNavigation.module.scss";
 import Link from "next/link";
 import { Button } from "@mui/material";
 import Icon from "@/components/ui/icons/Icon";
+import { useMediaQuery } from "@mui/material";
+import ButtonsActions from "./ButtonsActions";
 
 const MainNavigation = () => {
+  const desktopSmall = useMediaQuery("(max-width:1024px)");
+
   return (
     <div className={classes.header}>
       <div className={classes.left}>
@@ -53,27 +57,15 @@ const MainNavigation = () => {
         </Link>
       </div>
       <div className={classes.right}>
-        <Button
-          size="small"
-          variant="text"
-          startIcon={<Icon iconId="favorite_border" />}
-          sx={{ ".MuiButton-startIcon": { marginRight: "10px" } }}
-        >
-          Избранное
-        </Button>
-        <Button
-          size="small"
-          variant="outlined"
-          startIcon={<Icon iconId="user" />}
-        >
-          Вход
-        </Button>
-        <Button
-          size="small"
-          variant="contained"
-        >
-          Регистрация
-        </Button>
+        {!desktopSmall && <ButtonsActions />}
+        {desktopSmall && (
+          <Button
+            variant="contained"
+            type="round"
+          >
+            <Icon iconId="menu" />
+          </Button>
+        )}
       </div>
     </div>
   );
