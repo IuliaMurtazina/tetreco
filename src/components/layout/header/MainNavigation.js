@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./MainNavigation.module.scss";
 import Link from "next/link";
 import { Button } from "@mui/material";
 import Icon from "@/components/ui/icons/Icon";
 import { useMediaQuery } from "@mui/material";
 import ButtonsActions from "./ButtonsActions";
+import HeaderNav from "./HeaderNav";
 
 const MainNavigation = () => {
-  const desktopSmall = useMediaQuery("(max-width:1024px)");
+  const [showActionsButtons, setShowActionsButtons] = useState(false);
+  const desktop = useMediaQuery((theme) => theme.breakpoints.down("desktop"));
+  const tabletBig = useMediaQuery((theme) =>
+    theme.breakpoints.down("tabletBig"),
+  );
 
   return (
-    <div className={classes.header}>
+    <div className={`${classes.header} container`}>
       <div className={classes.left}>
         <Link
           href="/"
@@ -19,8 +24,9 @@ const MainNavigation = () => {
           Tetreco
         </Link>
         <div className={classes.location}>
-          <p>Местоположение: </p>
+          {!tabletBig && <p>Местоположение: </p>}
           <Button
+            className={classes["location__button"]}
             startIcon={<Icon iconId="room" />}
             size="small"
             variant="text"
@@ -30,43 +36,30 @@ const MainNavigation = () => {
           </Button>
         </div>
       </div>
-      <div className={classes.nav}>
-        <Link href="/">
-          <Button
-            size="small"
-            variant="text"
-          >
-            Главная
-          </Button>
-        </Link>
-        <Link href="/">
-          <Button
-            size="small"
-            variant="text"
-          >
-            О нас
-          </Button>
-        </Link>
-        <Link href="/">
-          <Button
-            size="small"
-            variant="text"
-          >
-            Контакты
-          </Button>
-        </Link>
-      </div>
+
+      {!tabletBig && <HeaderNav />}
+
       <div className={classes.right}>
-        {!desktopSmall && <ButtonsActions />}
-        {desktopSmall && (
+        {!desktop && <ButtonsActions />}
+        {desktop && (
           <Button
             variant="contained"
             type="round"
+            onClick={() => {
+              setShowActionsButtons(!showActionsButtons);
+            }}
           >
             <Icon iconId="menu" />
           </Button>
         )}
       </div>
+
+      {showActionsButtons && desktop && (
+        <div className={classes.actions}>
+          {tabletBig && <HeaderNav />}
+          <ButtonsActions />
+        </div>
+      )}
     </div>
   );
 };

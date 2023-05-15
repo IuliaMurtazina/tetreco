@@ -6,6 +6,17 @@ import MuiCheckbox from "./overrides/checkbox";
 import MuiRadio from "./overrides/radio";
 
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      phoneBig: 425,
+      tabletSmall2: 500,
+      tabletSmall: 650,
+      tablet: 768,
+      tabletBig: 820,
+      desktopSmall: 1024,
+      desktop: 1140,
+    },
+  },
   typography: {
     fontFamily: `'Golos Text', sans-serif`,
   },

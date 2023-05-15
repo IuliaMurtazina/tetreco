@@ -1,10 +1,11 @@
 import React from "react";
 import { Button } from "@mui/material";
 import Icon from "@/components/ui/icons/Icon";
+import classes from "./ButtonsActions.module.scss";
 
 const ButtonsActions = () => {
   return (
-    <>
+    <div className={classes.actions}>
       <Button
         size="small"
         variant="text"
@@ -26,7 +27,7 @@ const ButtonsActions = () => {
       >
         Регистрация
       </Button>
-    </>
+    </div>
   );
 };
 
