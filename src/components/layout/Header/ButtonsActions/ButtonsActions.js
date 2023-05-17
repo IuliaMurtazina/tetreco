@@ -12,20 +12,20 @@ const ButtonsActions = () => {
         startIcon={<Icon iconId="favorite_border" />}
         sx={{ ".MuiButton-startIcon": { marginRight: "10px" } }}
       >
-        Избранное
+        Favorites
       </Button>
       <Button
         size="small"
         variant="outlined"
         startIcon={<Icon iconId="user" />}
       >
-        Вход
+        Log in
       </Button>
       <Button
         size="small"
         variant="contained"
       >
-        Регистрация
+        Sign in
       </Button>
     </div>
   );

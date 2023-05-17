@@ -1,21 +1,4 @@
-@import "../../../styles/variables.scss";
-
-.searchBar {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  background-color: #fff;
-
-  @media screen and (max-width: $tablet-big) {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
-    position: sticky;
-    top: 0;
-  }
-}
+@import "../../../../styles/variables.scss";
 
 .search {
   display: flex;
@@ -26,8 +9,8 @@
   flex-grow: 1;
 
   &__input {
-    width: 50%;
-    max-width: 355px;
+    width: 100%;
+    max-width: 500px;
 
     @media screen and (max-width: $desktop) {
       width: 100%;

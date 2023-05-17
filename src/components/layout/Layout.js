@@ -1,14 +1,14 @@
 import React from "react";
-import Footer from "./footer/Footer";
-import MainNavigation from "./header/MainNavigation";
-import SearchBar from "./header/SearchBar";
+import Footer from "./Footer/Footer";
+import MainNavigation from "./Header/Header";
+import SearchContainer from "./SearchContainer/SearchContainer";
 
 const Layout = (props) => {
   return (
     <>
       <MainNavigation />
-      <SearchBar />
-      <main>
+      <SearchContainer />
+      <main style={{ height: 1000 }}>
         <div className="container">{props.children}</div>
       </main>
       <Footer />

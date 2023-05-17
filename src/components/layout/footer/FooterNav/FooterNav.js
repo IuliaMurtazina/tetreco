@@ -16,35 +16,35 @@ const FooterMobile = (props) => {
         }`}
       >
         <Icon iconId="home" />
-        <span>Главная</span>
+        <span>Main</span>
       </Link>
       <Link
         href="/"
         className={classes.link}
       >
         <Icon iconId="favorite_border" />
-        <span>Избранное</span>
+        <span>Favorites</span>
       </Link>
       <Link
         href="/"
         className={classes.link}
       >
         <Icon iconId="menu" />
-        <span>Объявления</span>
+        <span>Items</span>
       </Link>
       <Link
         href="/"
         className={classes.link}
       >
         <Icon iconId="mail_outline" />
-        <span>Сообщения</span>
+        <span>Messages</span>
       </Link>
       <Link
         href="/"
         className={classes.link}
       >
         <Icon iconId="person" />
-        <span>Профиль</span>
+        <span>Account</span>
       </Link>
     </div>
   );

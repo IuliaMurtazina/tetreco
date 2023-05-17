@@ -19,8 +19,11 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
   justify-content: space-between;
-  flex-wrap: wrap;
   background-color: #fff;
+
+  @media screen and (max-width: $desktop) {
+    flex-wrap: wrap;
+  }
 
   @media screen and (max-width: $tablet-big) {
     padding-top: 1rem;

@@ -1,0 +1,21 @@
+@import "../../../styles/variables.scss";
+
+.item {
+  padding: 1rem;
+  background: $Button-Secondary-Disabled;
+  border-radius: 12px;
+  text-decoration: none;
+  color: $Text-Primary;
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background: $Button-Primary-Disabled;
+  }
+
+  &:active {
+    background: $Button-Primary-Hover;
+  }
+}

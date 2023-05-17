@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "@mui/material";
-import classes from "./MainNavigation.module.scss";
+import classes from "../Header.module.scss";
 
 const HeaderNav = () => {
   return (
@@ -12,7 +12,7 @@ const HeaderNav = () => {
             size="small"
             variant="text"
           >
-            Главная
+            Main
           </Button>
         </Link>
         <Link href="/">
@@ -20,7 +20,7 @@ const HeaderNav = () => {
             size="small"
             variant="text"
           >
-            О нас
+            About us
           </Button>
         </Link>
         <Link href="/">
@@ -28,7 +28,7 @@ const HeaderNav = () => {
             size="small"
             variant="text"
           >
-            Контакты
+            Contacts
           </Button>
         </Link>
       </div>

@@ -1,0 +1,11 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  max-width: 13rem;
+
+  span {
+    text-align: center;
+  }
+}

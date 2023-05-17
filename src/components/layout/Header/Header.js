@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import classes from "./MainNavigation.module.scss";
+import classes from "./Header.module.scss";
 import Link from "next/link";
 import { Button } from "@mui/material";
 import Icon from "@/components/ui/icons/Icon";
 import { useMediaQuery } from "@mui/material";
-import ButtonsActions from "./ButtonsActions";
-import HeaderNav from "./HeaderNav";
+import HeaderNav from "./HeaderNav/HeaderNav";
+import ButtonsActions from "./ButtonsActions/ButtonsActions";
 
-const MainNavigation = () => {
+const Header = () => {
   const [showActionsButtons, setShowActionsButtons] = useState(false);
   const desktop = useMediaQuery((theme) => theme.breakpoints.down("desktop"));
   const tabletBig = useMediaQuery((theme) =>
@@ -24,7 +24,7 @@ const MainNavigation = () => {
           Tetreco
         </Link>
         <div className={classes.location}>
-          {!tabletBig && <p>Местоположение: </p>}
+          {!tabletBig && <p>Location: </p>}
           <Button
             className={classes["location__button"]}
             startIcon={<Icon iconId="room" />}
@@ -32,7 +32,7 @@ const MainNavigation = () => {
             variant="text"
             sx={{ ".MuiButton-startIcon": { marginRight: "8px" } }}
           >
-            Москва
+            Moscow
           </Button>
         </div>
       </div>
@@ -64,4 +64,4 @@ const MainNavigation = () => {
   );
 };
 
-export default MainNavigation;
+export default Header;

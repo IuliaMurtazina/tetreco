@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { TextField, InputAdornment } from "@mui/material";
 import Icon from "@/components/ui/icons/Icon";
-import FooterNav from "./FooterNav";
+import FooterNav from "./FooterNav/FooterNav";
 import classes from "./Footer.module.scss";
 import { useMediaQuery } from "@mui/material";
 
@@ -17,10 +17,10 @@ const Footer = () => {
         <div className={`${classes["footer-container"]} container`}>
           <div className={classes.left}>
             <nav>
-              <Link href="/">О компании</Link>
-              <Link href="/">Контакты</Link>
-              <Link href="/">Карьера</Link>
-              <Link href="/">Отзывы</Link>
+              <Link href="/">About us</Link>
+              <Link href="/">Contacts</Link>
+              <Link href="/">Career</Link>
+              <Link href="/">Feedbacks</Link>
             </nav>
             <Link href="/">FAQ</Link>
             <Link
@@ -31,13 +31,13 @@ const Footer = () => {
             </Link>
           </div>
           <div className={classes.right}>
-            <span>Рассылка</span>
-            <p>Подписывайтесь на наши новости:</p>
+            <span>Newsletters</span>
+            <p>Subscribe to our news:</p>
             <form>
               <TextField
-                search={true}
+                search="true"
                 size="small"
-                placeholder="Введите вашу почту"
+                placeholder="Enter your e-mail"
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
