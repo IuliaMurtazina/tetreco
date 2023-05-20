@@ -8,7 +8,7 @@ const Layout = (props) => {
     <>
       <MainNavigation />
       <SearchContainer />
-      <main style={{ height: 1000 }}>
+      <main>
         <div className="container">{props.children}</div>
       </main>
       <Footer />

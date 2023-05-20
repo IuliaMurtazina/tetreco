@@ -1,9 +1,4 @@
-import {
-  buttonPalette,
-  textPalette,
-  inputPalette,
-  iconPalette,
-} from "./palette";
+import { textPalette, inputPalette, iconPalette } from "./palette";
 
 const MuiTextField = {
   styleOverrides: {

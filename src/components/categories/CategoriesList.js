@@ -9,8 +9,7 @@ import { Button, useMediaQuery } from "@mui/material";
 import Icon from "../ui/icons/Icon";
 import CategoriesItemMobile from "./CategoriesItem/CategoriesItemMobile";
 
-const CategoriesList = ({ data }) => {
-  const categories = data.categories;
+const CategoriesList = ({ categories }) => {
   const tablet = useMediaQuery((theme) => theme.breakpoints.up("tablet"));
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
@@ -29,7 +28,7 @@ const CategoriesList = ({ data }) => {
               swiper.params.navigation.prevEl = navigationPrevRef.current;
               swiper.params.navigation.nextEl = navigationNextRef.current;
             }}
-            spaceBetween={30}
+            style={{ paddingLeft: "3rem" }}
             slidesPerView="auto"
             breakpoints={{
               769: {

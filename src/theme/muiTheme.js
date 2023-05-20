@@ -4,6 +4,8 @@ import MuiSwitch from "./overrides/switch";
 import MuiTextField from "./overrides/input";
 import MuiCheckbox from "./overrides/checkbox";
 import MuiRadio from "./overrides/radio";
+import MuiSelect from "./overrides/select";
+import MuiMenuItem from "./overrides/menuItem";
 
 const theme = createTheme({
   breakpoints: {
@@ -31,6 +33,8 @@ const theme = createTheme({
     MuiTextField: MuiTextField,
     MuiCheckbox: MuiCheckbox,
     MuiRadio: MuiRadio,
+    MuiSelect: MuiSelect,
+    MuiMenuItem: MuiMenuItem,
   },
 });
 

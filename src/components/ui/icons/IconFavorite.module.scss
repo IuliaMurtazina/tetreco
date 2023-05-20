@@ -1,5 +1,17 @@
 @import "../../../styles/variables.scss";
 
+.container {
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 1.6rem;
+  top: 1.6rem;
+}
+
 .favorite {
   height: 2.4rem;
   width: 2.4rem;
