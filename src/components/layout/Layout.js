@@ -1,12 +1,12 @@
 import React from "react";
-import Footer from "./Footer/Footer";
-import MainNavigation from "./Header/Header";
-import SearchContainer from "./SearchContainer/SearchContainer";
+import Footer from "./footer/Footer";
+import Header from "./header/Header";
+import SearchContainer from "./search-container/SearchContainer";
 
 const Layout = (props) => {
   return (
     <>
-      <MainNavigation />
+      <Header />
       <SearchContainer />
       <main>
         <div className="container">{props.children}</div>
