@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./ItemsHeader.module.scss";
-import { Switch, TextField, InputAdornment } from "@mui/material";
+import { Switch } from "@mui/material";
 import Icon from "@/components/ui/icons/Icon";
 import { useDispatch } from "react-redux";
 import { SET_VIEW_MODE_LIST } from "@/store/reducers/items";

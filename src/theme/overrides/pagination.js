@@ -1,4 +1,4 @@
-import { buttonPalette, iconPalette, textPalette } from "./palette";
+import { buttonPalette, textPalette } from "./palette";
 
 const MuiPagination = {
   styleOverrides: {

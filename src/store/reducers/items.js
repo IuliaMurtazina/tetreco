@@ -1,4 +1,4 @@
-import { createSlice, createAction, current } from "@reduxjs/toolkit";
+import { createSlice, createAction } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper";
 
 export const reducerPrefix = "items";

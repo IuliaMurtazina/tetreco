@@ -8,7 +8,6 @@ import { SET_NEW_PAGE, loadItems } from "@/store/reducers/items";
 import { Pagination } from "@mui/material";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
-import AuthPopup from "@/components/auth/AuthPopup";
 
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) => async (context) => {

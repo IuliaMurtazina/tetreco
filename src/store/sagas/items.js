@@ -2,7 +2,6 @@ import axiosInstance from "../../../axios-instance";
 import { call, takeEvery, put } from "redux-saga/effects";
 import {
   CHANGE_ORDERING,
-  LOAD_ITEMS_LOADING,
   LOAD_ITEMS_SUCCESS,
   SET_COUNT_OF_ITEMS,
 } from "../reducers/items";
