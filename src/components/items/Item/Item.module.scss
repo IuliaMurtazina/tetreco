@@ -1,27 +1,62 @@
 @import "../../../styles/variables.scss";
 
-.item,
 .content {
   display: flex;
   flex-direction: column;
 }
 
 .item {
+  display: flex;
   width: 100%;
-  max-width: 28rem;
   position: relative;
 
   img {
-    border-radius: 8px 8px 0px 0px;
+    object-fit: cover;
+    height: 21rem;
+  }
+
+  &__module {
+    flex-direction: column;
+
+    img {
+      border-radius: 8px 8px 0px 0px;
+    }
+  }
+
+  &__list {
+    img {
+      border-radius: 8px 0px 0px 8px;
+      width: 28rem;
+
+      @media screen and (max-width: $tablet-small) {
+        width: 18rem;
+        height: 14rem;
+      }
+
+      @media screen and (max-width: $phone-big) {
+        width: 11rem;
+      }
+    }
   }
 }
 
 .content {
   background-color: #fff;
   padding: 2.4rem 1.6rem 1.6rem 1.6rem;
-  border-radius: 0px 0px 8px 8px;
   flex: 1;
   gap: 0.8rem;
+
+  &__module {
+    border-radius: 0px 0px 8px 8px;
+  }
+
+  &__list {
+    border-radius: 0px 8px 8px 0px;
+
+    @media screen and (max-width: $tablet-small) {
+      padding: 0.8rem 1.6rem 0.8rem 1.6rem;
+    }
+  }
 }
 
 .name {
@@ -40,4 +75,32 @@
 
 .date {
   color: $Text-Secondary;
+}
+
+.icon {
+  position: absolute;
+
+  @media screen and (max-width: $tablet-small) {
+    padding: 5px !important;
+  }
+
+  &__module {
+    right: 1.6rem;
+    top: 1.6rem;
+
+    @media screen and (max-width: $tablet-small) {
+      right: 0.6rem;
+      top: 0.6rem;
+    }
+  }
+
+  &__list {
+    left: 1.6rem;
+    top: 1.6rem;
+
+    @media screen and (max-width: $tablet-small) {
+      left: 0.6rem;
+      top: 0.6rem;
+    }
+  }
 }

@@ -1,47 +1,28 @@
 import React from "react";
 import classes from "./ItemsHeader.module.scss";
-import { Switch, Select, MenuItem } from "@mui/material";
+import { Switch, TextField, InputAdornment } from "@mui/material";
 import Icon from "@/components/ui/icons/Icon";
-import { useDispatch, useSelector } from "react-redux";
-import { sortItems } from "@/store/reducers/items";
+import { useDispatch } from "react-redux";
+import { SET_VIEW_MODE_LIST } from "@/store/reducers/items";
+import { useMediaQuery } from "@mui/material";
+import SelectOrdering from "./SelectOrdering/SelectOrdering";
 
 const ItemsHeader = () => {
-  const sort = useSelector((state) => state.items.sort);
-  const dispath = useDispatch();
-  const handleChange = (event) => {
-    dispath(sortItems(event.target.value));
-    // router.push(`${`ordering=${sort}&`}page=1`);
-  };
+  const dispatch = useDispatch();
+  const tablet = useMediaQuery((theme) => theme.breakpoints.down("tablet"));
 
   return (
     <div className={classes.header}>
-      <h2>Popular items</h2>
+      <h2 className={classes.heading}>Popular items</h2>
       <div className={classes.actions}>
         <Switch
           defaultChecked
           mode="viewList"
           icon={<Icon iconId="view_list" />}
           checkedIcon={<Icon iconId="view_module" />}
+          onChange={(event, checked) => dispatch(SET_VIEW_MODE_LIST(checked))}
         />
-        <Select
-          value={sort}
-          displayEmpty
-          size="medium"
-          onChange={handleChange}
-          inputProps={{ "aria-label": "Without label" }}
-          IconComponent={() => <Icon iconId="expand_more" />}
-        >
-          <MenuItem
-            style={{ display: "none" }}
-            value=""
-            disabled
-          >
-            Sort
-          </MenuItem>
-          <MenuItem value="name">By title</MenuItem>
-          <MenuItem value="price">By price</MenuItem>
-          <MenuItem value="date">By date</MenuItem>
-        </Select>
+        <SelectOrdering tablet={tablet} />
       </div>
     </div>
   );

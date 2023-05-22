@@ -20,15 +20,14 @@ const categoriesSlice = createSlice({
     LOAD_CATEGORIES_SUCCESS: (state, action) => {
       state.categories = action.payload;
     },
-
-    extraReducers: {
-      [HYDRATE]: (state, action) => {
-        return {
-          ...state,
-          ...action.payload,
-        };
-      },
-    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(HYDRATE, (state, action) => {
+      return {
+        ...state,
+        ...action.payload[reducerPrefix],
+      };
+    });
   },
 });
 

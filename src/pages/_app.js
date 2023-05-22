@@ -5,8 +5,8 @@ import Layout from "@/components/layout/Layout";
 import { wrapper } from "@/store";
 import { Provider } from "react-redux";
 
-const App = ({ Component, pageProps, ...rest }) => {
-  const { store } = wrapper.useWrappedStore(rest);
+const App = ({ Component, pageProps }) => {
+  const { store } = wrapper.useWrappedStore(pageProps);
 
   return (
     <Provider store={store}>

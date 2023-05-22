@@ -6,6 +6,7 @@ import MuiCheckbox from "./overrides/checkbox";
 import MuiRadio from "./overrides/radio";
 import MuiSelect from "./overrides/select";
 import MuiMenuItem from "./overrides/menuItem";
+import MuiPagination from "./overrides/pagination";
 
 const theme = createTheme({
   breakpoints: {
@@ -15,6 +16,7 @@ const theme = createTheme({
       tabletSmall: 650,
       tablet: 768,
       tabletBig: 820,
+      desktopSmall2: 930,
       desktopSmall: 1024,
       desktop: 1140,
     },
@@ -35,6 +37,7 @@ const theme = createTheme({
     MuiRadio: MuiRadio,
     MuiSelect: MuiSelect,
     MuiMenuItem: MuiMenuItem,
+    MuiPagination: MuiPagination,
   },
 });
 

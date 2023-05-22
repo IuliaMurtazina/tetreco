@@ -27,5 +27,4 @@ export const makeStore = () => {
   return store;
 };
 
-export const store = makeStore();
 export const wrapper = createWrapper(makeStore);

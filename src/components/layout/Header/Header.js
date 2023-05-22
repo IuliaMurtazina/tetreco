@@ -10,9 +10,10 @@ import ButtonsActions from "./ButtonsActions/ButtonsActions";
 const Header = () => {
   const [showActionsButtons, setShowActionsButtons] = useState(false);
   const desktop = useMediaQuery((theme) => theme.breakpoints.down("desktop"));
-  const tabletBig = useMediaQuery((theme) =>
-    theme.breakpoints.down("tabletBig"),
+  const desktopSmall2 = useMediaQuery((theme) =>
+    theme.breakpoints.down("desktopSmall2"),
   );
+  const tablet = useMediaQuery((theme) => theme.breakpoints.down("tablet"));
 
   return (
     <div className={`${classes.header} container`}>
@@ -24,7 +25,7 @@ const Header = () => {
           Tetreco
         </Link>
         <div className={classes.location}>
-          {!tabletBig && <p>Location: </p>}
+          {!tablet && <p>Location: </p>}
           <Button
             className={classes["location__button"]}
             startIcon={<Icon iconId="room" />}
@@ -37,11 +38,11 @@ const Header = () => {
         </div>
       </div>
 
-      {!tabletBig && <HeaderNav />}
+      {!tablet && <HeaderNav />}
 
       <div className={classes.right}>
-        {!desktop && <ButtonsActions />}
-        {desktop && (
+        {!desktopSmall2 && <ButtonsActions />}
+        {desktopSmall2 && (
           <Button
             variant="contained"
             type="round"
@@ -56,7 +57,7 @@ const Header = () => {
 
       {showActionsButtons && desktop && (
         <div className={classes.actions}>
-          {tabletBig && <HeaderNav />}
+          {tablet && <HeaderNav />}
           <ButtonsActions />
         </div>
       )}

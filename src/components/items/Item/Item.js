@@ -1,9 +1,8 @@
 import React from "react";
 import classes from "./Item.module.scss";
-import Image from "next/image";
 import IconFavorite from "@/components/ui/icons/IconFavorite";
 
-const Item = ({ image, name, price, created }) => {
+const Item = ({ image, name, price, created, viewClassName }) => {
   const date = new Date(created).toLocaleDateString();
   const time = new Date(created).toLocaleTimeString([], {
     hour: "2-digit",
@@ -11,16 +10,19 @@ const Item = ({ image, name, price, created }) => {
   });
 
   return (
-    <div className={classes.item}>
-      <IconFavorite selected={false} />
-      <Image
-        width={280}
-        height={210}
-        src={image}
-        alt="a"
-        style={{ objectFit: "cover" }}
+    <div className={`${classes.item} ${classes[`item__${viewClassName}`]}`}>
+      <IconFavorite
+        selected={false}
+        className={`${classes.icon} ${classes[`icon__${viewClassName}`]}`}
       />
-      <div className={classes.content}>
+      <img
+        src={image}
+        alt={name}
+      />
+
+      <div
+        className={`${classes.content} ${classes[`content__${viewClassName}`]}`}
+      >
         <span className={classes.name}>{name}</span>
         <span className={classes.price}>{price && `${price} ₽`}</span>
         <span className={classes.date}>{`${date} at ${time}`}</span>

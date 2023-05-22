@@ -1,8 +1,22 @@
+@import "../../../styles/variables.scss";
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 4rem;
+
+  @media screen and (max-width: $tablet) {
+    padding-bottom: 1.6rem;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.heading {
+  @media screen and (max-width: $tablet) {
+    font-size: 1.6rem;
+  }
 }
 
 .actions {

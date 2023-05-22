@@ -7,7 +7,7 @@ const IconFavorite = (props) => {
     : `${classes["favorite__border"]}`;
 
   return (
-    <div className={classes.container}>
+    <div className={`${classes.container} ${props.className}`}>
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
