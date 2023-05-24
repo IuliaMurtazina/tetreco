@@ -8,6 +8,7 @@ import { SET_IS_AUTH_POPUP_OPEN } from "@/store/reducers/ui";
 const ButtonsActions = () => {
   const dispatch = useDispatch();
 
+  // test
   return (
     <div className={classes.actions}>
       <Button
