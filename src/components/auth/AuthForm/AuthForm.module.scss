@@ -1,0 +1,54 @@
+@import "../../../styles/variables.scss";
+
+.container {
+  @include flex-vert;
+  width: 70%;
+  max-width: 50rem;
+  position: relative;
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
+
+.form {
+  @include flex-vert;
+  gap: 2rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+
+  label {
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: $Text-Accent-Enabled;
+
+      &:hover {
+        color: $Text-Accent-Pressed;
+      }
+    }
+  }
+}
+
+.close {
+  position: absolute;
+  top: -3px;
+  left: 0;
+}

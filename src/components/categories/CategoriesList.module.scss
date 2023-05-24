@@ -6,8 +6,7 @@
 
   @media screen and (max-width: $tablet) {
     padding: 0;
-    display: flex;
-    align-items: center;
+    @include flex-center;
     gap: 1rem;
     overflow-x: scroll;
   }
@@ -36,9 +35,8 @@
 }
 
 .pagination-button {
-  display: flex;
+  @include flex-center;
   justify-content: center;
-  align-items: center;
   width: 3.2rem;
   height: 3.2rem;
   background: #fff;

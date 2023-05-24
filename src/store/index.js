@@ -7,6 +7,7 @@ import categoriesReducer, {
 import itemsReducer, {
   reducerPrefix as ITEMS_REDUCER_PREFIX,
 } from "./reducers/items";
+import uiReducer, { reducerPrefix as UI_REDUCER_PREFIX } from "./reducers/ui";
 import { createWrapper } from "next-redux-wrapper";
 
 export const makeStore = () => {
@@ -16,6 +17,7 @@ export const makeStore = () => {
     reducer: {
       [CATEGORIES_REDUCER_PREFIX]: categoriesReducer,
       [ITEMS_REDUCER_PREFIX]: itemsReducer,
+      [UI_REDUCER_PREFIX]: uiReducer,
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(sagaMiddleware),

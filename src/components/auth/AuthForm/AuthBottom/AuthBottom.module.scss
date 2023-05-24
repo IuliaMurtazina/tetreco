@@ -1,0 +1,10 @@
+@import "../../../../styles/variables.scss";
+
+.bottom {
+  @include flex-center;
+  align-self: center;
+
+  button {
+    color: $Text-Accent-Enabled;
+  }
+}

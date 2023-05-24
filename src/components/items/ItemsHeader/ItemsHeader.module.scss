@@ -1,8 +1,7 @@
 @import "../../../styles/variables.scss";
 
 .header {
-  display: flex;
-  align-items: center;
+  @include flex-center;
   justify-content: space-between;
   padding-bottom: 4rem;
 
@@ -20,7 +19,6 @@
 }
 
 .actions {
-  display: flex;
-  align-items: center;
+  @include flex-center;
   gap: 2rem;
 }

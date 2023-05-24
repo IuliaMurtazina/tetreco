@@ -8,6 +8,7 @@ import { SET_NEW_PAGE, loadItems } from "@/store/reducers/items";
 import { Pagination } from "@mui/material";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
+import AuthPopup from "@/components/auth/AuthPopup";
 
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) => async (context) => {
@@ -32,6 +33,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
 const Home = ({ categories, items, countOfPages }) => {
   const ordering = useSelector((state) => state.items.ordering);
   const currentPage = useSelector((state) => state.items.currentPage);
+  const isAuthPopupOpen = useSelector((state) => state.ui.isAuthPopupOpen);
   const dispatch = useDispatch();
   const router = useRouter();
 
@@ -48,6 +50,7 @@ const Home = ({ categories, items, countOfPages }) => {
 
   return (
     <>
+      {isAuthPopupOpen && <AuthPopup />}
       <CategoriesList categories={categories} />
       <ItemsHeader />
       <ItemsList items={items} />

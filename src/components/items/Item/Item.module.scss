@@ -1,8 +1,7 @@
 @import "../../../styles/variables.scss";
 
 .content {
-  display: flex;
-  flex-direction: column;
+  @include flex-vert;
 }
 
 .item {

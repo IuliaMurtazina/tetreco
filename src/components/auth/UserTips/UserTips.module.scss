@@ -1,0 +1,29 @@
+@import "../../../styles/variables.scss";
+
+.user {
+  @include flex-vert;
+  gap: 2rem;
+  width: 100%;
+  max-width: 35.8rem;
+
+  img {
+    width: 100%;
+    max-width: 28.4rem;
+    align-self: center;
+  }
+}
+
+.tips {
+  @include flex-vert;
+  gap: 1.6rem;
+}
+
+.tip {
+  @include flex-center;
+  gap: 0.8rem;
+
+  img {
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+}
