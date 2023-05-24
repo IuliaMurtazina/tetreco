@@ -1,0 +1,79 @@
+@import "../../../../styles/variables.scss";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+
+  @media screen and (max-width: $phone-big) {
+    padding: 0 1rem;
+  }
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: $Text-Primary;
+  padding: 1.6rem 0;
+  transition: all 0.3s;
+
+  svg {
+    padding: 0.4rem;
+    border-radius: 0.8rem;
+  }
+
+  span {
+    @media screen and (max-width: $tablet-small) {
+      font-size: 1.3rem;
+    }
+
+    @media screen and (max-width: $phone-big) {
+      font-size: 1rem;
+    }
+  }
+
+  &:hover {
+    color: #fff;
+
+    span {
+      color: $Button-Primary-Hover;
+    }
+
+    svg {
+      background-color: $Button-Primary-Hover;
+    }
+  }
+
+  &:active {
+    color: #fff;
+
+    span {
+      color: $Button-Primary-Pressed;
+    }
+
+    svg {
+      background-color: $Button-Primary-Pressed;
+    }
+  }
+}
+
+.sticky {
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.active {
+  color: #fff;
+
+  span {
+    color: $Button-Primary-Enabled;
+  }
+
+  svg {
+    background-color: $Button-Primary-Enabled;
+  }
+}

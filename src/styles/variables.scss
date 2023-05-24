@@ -41,6 +41,8 @@ $Icon-Service-Error: #e9305d;
 $Icon-Service-Warning: #f3a015;
 $Icon-Service-Success: #7cbc68;
 
+$Icon-Tertiary: #6a7998;
+
 // Background
 
 $Background-Primary-Light: #ffffff;
@@ -78,3 +80,13 @@ $Input-Focused: #6b51ba;
   font-size: 1.6rem;
   line-height: 2rem;
 }
+
+// Breakpoints
+
+$desktop: 1140px;
+$desktop-small: 1024px;
+$tablet-big: 820px;
+$tablet: 768px;
+$tablet-small: 650px;
+$tablet-small-2: 500px;
+$phone-big: 425px;

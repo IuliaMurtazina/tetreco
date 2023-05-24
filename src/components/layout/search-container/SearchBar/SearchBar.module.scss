@@ -1,0 +1,33 @@
+@import "../../../../styles/variables.scss";
+
+.search {
+  display: flex;
+  align-items: center;
+  background: $Button-Secondary-Anabled;
+  border: 1px solid $Button-Secondary-Anabled;
+  border-radius: 8px;
+  flex-grow: 1;
+
+  &__input {
+    width: 100%;
+    max-width: 500px;
+
+    @media screen and (max-width: $desktop) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: $tablet-big) {
+      max-width: 100%;
+    }
+  }
+
+  &__city {
+    width: 100%;
+    max-width: 196px;
+
+    @media screen and (max-width: $desktop) {
+      min-width: 196px;
+      max-width: 100%;
+    }
+  }
+}

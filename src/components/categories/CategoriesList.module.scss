@@ -1,0 +1,61 @@
+@import "../../styles/variables.scss";
+
+.list {
+  padding: 4rem 0;
+  position: relative;
+
+  @media screen and (max-width: $tablet) {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    overflow-x: scroll;
+  }
+}
+
+.button {
+  padding: 1rem 1rem 1rem 0;
+  background-color: $Background-Background;
+  position: sticky;
+  left: 0;
+
+  &::before {
+    content: "";
+    height: 100%;
+    width: 3rem;
+    background: linear-gradient(
+      270deg,
+      transparent 0%,
+      $Background-Background 70%
+    );
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -2rem;
+  }
+}
+
+.pagination-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: #fff;
+  border: 2px solid $Button-Secondary-Anabled;
+  border-radius: 50%;
+  color: $Icon-Tertiary;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  &__left {
+    left: 0;
+  }
+
+  &__right {
+    right: 0;
+  }
+}

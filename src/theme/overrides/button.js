@@ -111,7 +111,7 @@ const MuiButton = {
       },
     },
     {
-      props: { search: true },
+      props: { search: "true" },
       style: {
         borderColor: buttonPalette.secondary.enabled,
         backgroundColor: buttonPalette.secondary.enabled,

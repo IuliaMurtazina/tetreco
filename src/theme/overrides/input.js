@@ -1,9 +1,4 @@
-import {
-  buttonPalette,
-  textPalette,
-  inputPalette,
-  iconPalette,
-} from "./palette";
+import { textPalette, inputPalette, iconPalette } from "./palette";
 
 const MuiTextField = {
   styleOverrides: {
@@ -96,7 +91,7 @@ const MuiTextField = {
       },
     },
     {
-      props: { search: true },
+      props: { search: "true" },
       style: {
         ":hover": {
           "& .MuiOutlinedInput-root fieldset": {
