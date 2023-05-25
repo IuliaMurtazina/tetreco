@@ -90,3 +90,15 @@ $tablet: 768px;
 $tablet-small: 650px;
 $tablet-small-2: 500px;
 $phone-big: 425px;
+
+// flex mixins
+
+@mixin flex-vert {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
