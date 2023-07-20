@@ -27,6 +27,7 @@ const MuiTextField = {
     {
       props: { variant: "outlined" },
       style: {
+        // hover styles
         ":hover": {
           label: {
             transform: "translate(14px, -9px) scale(0.75)",
@@ -39,6 +40,8 @@ const MuiTextField = {
             borderColor: inputPalette.hover,
           },
         },
+
+        // main styles
         "& .MuiOutlinedInput-root": {
           fieldset: {
             borderWidth: 2,
@@ -48,10 +51,26 @@ const MuiTextField = {
             borderColor: inputPalette.focused,
           },
         },
+
+        //focused styles
         "& label.Mui-focused": {
           color: textPalette.primary.main,
         },
         ".MuiFormHelperText-root.Mui-focused": {
+          color: textPalette.secondary,
+        },
+
+        // error styles
+        "& .MuiOutlinedInput-root.Mui-error": {
+          fieldset: {
+            borderWidth: 2,
+            borderColor: inputPalette.enabled,
+          },
+          "&.Mui-focused fieldset": {
+            borderColor: inputPalette.focused,
+          },
+        },
+        "label.Mui-error": {
           color: textPalette.secondary,
         },
       },
@@ -85,7 +104,7 @@ const MuiTextField = {
         label: {
           transform: "translate(14px, 12px) scale(1)",
         },
-        "& label.Mui-focused": {
+        "& label.Mui-focused, .MuiFormLabel-filled": {
           transform: "translate(14px, -9px) scale(0.75)",
         },
       },

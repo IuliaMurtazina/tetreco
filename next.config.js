@@ -7,7 +7,7 @@ const nextConfig = {
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
-    domains: ["storage.baleto.com"],
+    domains: ["storage.baleto.com", "storage.photostokstorage.ru"],
   },
 };
 

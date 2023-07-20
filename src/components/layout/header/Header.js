@@ -20,7 +20,7 @@ const Header = () => {
       <div className={classes.left}>
         <Link
           href="/"
-          className={classes.logo}
+          className="logo"
         >
           Tetreco
         </Link>

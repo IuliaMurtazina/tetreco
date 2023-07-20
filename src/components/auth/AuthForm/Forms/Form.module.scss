@@ -1,0 +1,25 @@
+@import "../../../../styles/variables.scss";
+
+.form {
+  @include flex-vert;
+  gap: 2rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+
+  label {
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: $Text-Accent-Enabled;
+
+      &:hover {
+        color: $Text-Accent-Pressed;
+      }
+    }
+  }
+}
