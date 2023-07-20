@@ -19,7 +19,7 @@ const SignUpForm = () => {
     <Formik
       initialValues={initialValues}
       validationSchema={YupValidation}
-      onSubmit={(values) => console.log(values)}
+      // onSubmit={(values) => console.log(values)}
     >
       {(props) => {
         const addTextFieldProps = {
